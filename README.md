@@ -27,7 +27,7 @@ A React Native recipe app built with Expo, demonstrating real-world navigation p
 
 ## Project structure
 
-```json
+```ts
 app/
   _layout.tsx           # Root Stack
   filter.tsx            # formSheet — difficulty filter
