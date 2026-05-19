@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+echo "Running typecheck..."
+pnpm tsc --noEmit || exit 1
+
+echo "Running linters..."
+pnpm exec lint-staged || exit 1

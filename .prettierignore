@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+.cache
+public
+node_modules
+ios
+android
+.expo
+pnpm-lock.yaml

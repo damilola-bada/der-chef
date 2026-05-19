@@ -1,33 +1,63 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { Colors } from '@/src/constants/theme';
+import { useFilter } from '@/src/features/recipe/store/filterStore';
+import { Ionicons } from '@expo/vector-icons';
+import { type Href, router, Tabs } from 'expo-router';
+import { Pressable } from 'react-native';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const activeFilter = useFilter();
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+        tabBarActiveTintColor: Colors.accent,
+        tabBarInactiveTintColor: Colors.textMuted,
+        tabBarStyle: {
+          backgroundColor: Colors.surface,
+          elevation: 5,
+          height: 80,
+          paddingTop: 10,
+          paddingHorizontal: 14,
+        },
+        headerStyle: {
+          backgroundColor: Colors.surface,
+        },
+        headerTitleStyle: {
+          fontWeight: '600',
+          color: Colors.textPrimary,
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Recipes',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="restaurant-outline" size={size} color={color} />
+          ),
+          headerRight: () => (
+            <Pressable
+              onPress={() => router.push('/filter' as Href)}
+              style={{ marginRight: 16 }}
+            >
+              <Ionicons
+                name={activeFilter !== 'All' ? 'options' : 'options-outline'}
+                size={22}
+                color={
+                  activeFilter !== 'All' ? Colors.accent : Colors.textSecondary
+                }
+              />
+            </Pressable>
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="favorites"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Favorites',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="heart-outline" size={size} color={color} />
+          ),
         }}
       />
     </Tabs>

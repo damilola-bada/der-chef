@@ -1,0 +1,256 @@
+import { Recipe } from '../types/recipe';
+
+export const mockRecipes: Recipe[] = [
+  {
+    id: '1',
+    title: 'Creamy Pasta',
+    image:
+      'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=1200&auto=format&fit=crop',
+    duration: '25 mins',
+    difficulty: 'Easy',
+    description:
+      'A creamy garlic pasta recipe perfect for quick weeknight dinners.',
+    rating: 4.5,
+    ingredients: ['Pasta', 'Garlic', 'Cream', 'Parmesan', 'Olive oil'],
+    cookingInstructions: [
+      'Bring a large pot of salted water to a boil and cook pasta until al dente.',
+      'While pasta cooks, heat olive oil in a pan over medium heat and sauté minced garlic for 1–2 minutes.',
+      'Pour in the cream and let it simmer for 3 minutes until slightly thickened.',
+      'Drain pasta, reserving ½ cup of pasta water, and add to the pan.',
+      'Toss with grated parmesan, adding pasta water as needed to loosen the sauce.',
+      'Season with salt and pepper, then serve immediately.',
+    ],
+  },
+  {
+    id: '2',
+    title: 'Chicken Curry',
+    image:
+      'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1200&auto=format&fit=crop',
+    duration: '45 mins',
+    difficulty: 'Medium',
+    description:
+      'Rich and flavorful chicken curry with coconut milk and spices.',
+    rating: 4.8,
+    ingredients: ['Chicken', 'Coconut milk', 'Curry powder', 'Onions', 'Rice'],
+    cookingInstructions: [
+      'Dice chicken into bite-sized pieces and season with salt.',
+      'Fry diced onions in oil over medium heat until golden, about 8 minutes.',
+      'Add curry powder and stir for 1 minute to bloom the spices.',
+      'Add chicken and cook until sealed on all sides, about 5 minutes.',
+      'Pour in coconut milk, bring to a simmer, and cook for 20 minutes.',
+      'Serve over steamed rice, garnished with fresh coriander.',
+    ],
+  },
+  {
+    id: '3',
+    title: 'Berry Pancakes',
+    image:
+      'https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=1200&auto=format&fit=crop',
+    duration: '20 mins',
+    difficulty: 'Easy',
+    description: 'Fluffy pancakes topped with fresh berries and maple syrup.',
+    rating: 4.3,
+    ingredients: ['Flour', 'Milk', 'Eggs', 'Berries', 'Maple syrup'],
+    cookingInstructions: [
+      'Whisk together flour, a pinch of salt, and a teaspoon of baking powder.',
+      'In a separate bowl, beat eggs with milk, then combine with the dry ingredients until just mixed.',
+      'Heat a non-stick pan over medium heat and lightly grease with butter.',
+      'Pour ¼ cup of batter per pancake and cook until bubbles form on the surface, about 2 minutes.',
+      'Flip and cook for another minute until golden.',
+      'Stack pancakes, top with fresh berries, and drizzle with maple syrup.',
+    ],
+  },
+  {
+    id: '4',
+    title: 'Avocado Toast',
+    image:
+      'https://images.unsplash.com/photo-1633204339691-9d3645430e14?w=500&auto=format&fit=crop',
+    duration: '10 mins',
+    difficulty: 'Easy',
+    description:
+      'Simple and satisfying avocado toast with a sprinkle of chili flakes and a squeeze of lemon.',
+    rating: 4.1,
+    ingredients: [
+      'Sourdough bread',
+      'Avocado',
+      'Lemon',
+      'Chili flakes',
+      'Salt',
+      'Olive oil',
+    ],
+    cookingInstructions: [
+      'Toast the sourdough slices until golden and crisp.',
+      'Halve the avocado, remove the pit, and scoop flesh into a bowl.',
+      'Mash the avocado with a fork and season with salt and a squeeze of lemon juice.',
+      'Spread the avocado mixture generously over the toast.',
+      'Drizzle with olive oil and finish with a pinch of chili flakes.',
+    ],
+  },
+  {
+    id: '5',
+    title: 'Beef Tacos',
+    image:
+      'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=1200&auto=format&fit=crop',
+    duration: '30 mins',
+    difficulty: 'Medium',
+    description:
+      'Crispy beef tacos loaded with seasoned ground beef, fresh salsa, and sour cream.',
+    rating: 4.6,
+    ingredients: [
+      'Ground beef',
+      'Taco shells',
+      'Cheddar cheese',
+      'Salsa',
+      'Sour cream',
+      'Lettuce',
+      'Cumin',
+    ],
+    cookingInstructions: [
+      'Brown ground beef in a skillet over high heat, breaking it apart as it cooks.',
+      'Drain excess fat, then season with cumin, salt, pepper, and a splash of water.',
+      'Simmer for 5 minutes until the mixture is fragrant and slightly saucy.',
+      'Warm taco shells in the oven at 180°C for 3 minutes.',
+      'Fill each shell with beef, shredded lettuce, and grated cheddar.',
+      'Top with salsa and sour cream, then serve immediately.',
+    ],
+  },
+  {
+    id: '6',
+    title: 'Caesar Salad',
+    image:
+      'https://images.unsplash.com/photo-1546793665-c74683f339c1?q=80&w=1200&auto=format&fit=crop',
+    duration: '15 mins',
+    difficulty: 'Easy',
+    description:
+      'Classic Caesar salad with crispy croutons, shaved parmesan, and a tangy homemade dressing.',
+    rating: 4.2,
+    ingredients: [
+      'Romaine lettuce',
+      'Parmesan',
+      'Croutons',
+      'Caesar dressing',
+      'Lemon',
+      'Black pepper',
+    ],
+    cookingInstructions: [
+      'Tear romaine lettuce into large pieces and place in a large bowl.',
+      'Add Caesar dressing and toss well to coat every leaf.',
+      'Squeeze over a little fresh lemon juice and toss again.',
+      'Add croutons and shaved parmesan.',
+      'Finish with freshly cracked black pepper and serve immediately.',
+    ],
+  },
+  {
+    id: '7',
+    title: 'Mushroom Risotto',
+    image:
+      'https://images.unsplash.com/photo-1476124369491-e7addf5db371?q=80&w=1200&auto=format&fit=crop',
+    duration: '40 mins',
+    difficulty: 'Hard',
+    description:
+      'Velvety mushroom risotto made with arborio rice, white wine, and a generous amount of parmesan.',
+    rating: 4.9,
+    ingredients: [
+      'Arborio rice',
+      'Mushrooms',
+      'White wine',
+      'Parmesan',
+      'Vegetable stock',
+      'Shallots',
+      'Butter',
+      'Thyme',
+    ],
+    cookingInstructions: [
+      'Warm vegetable stock in a separate saucepan and keep on low heat.',
+      'Sauté finely diced shallots in butter over medium heat until translucent.',
+      'Add sliced mushrooms and thyme, cooking until the mushrooms are golden.',
+      'Stir in arborio rice and toast for 2 minutes until the edges turn translucent.',
+      'Pour in white wine and stir until fully absorbed.',
+      'Add stock one ladle at a time, stirring constantly and waiting for each addition to absorb before adding the next.',
+      'After about 20 minutes, when the rice is al dente, remove from heat.',
+      'Stir in a knob of butter and grated parmesan, then season and serve.',
+    ],
+  },
+  {
+    id: '8',
+    title: 'Greek Yogurt Bowl',
+    image:
+      'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop',
+    duration: '5 mins',
+    difficulty: 'Easy',
+    description:
+      'A quick and healthy breakfast bowl with Greek yogurt, granola, honey, and fresh fruit.',
+    rating: 4.0,
+    ingredients: [
+      'Greek yogurt',
+      'Granola',
+      'Honey',
+      'Banana',
+      'Blueberries',
+      'Chia seeds',
+    ],
+    cookingInstructions: [
+      'Spoon Greek yogurt into a bowl.',
+      'Slice the banana and arrange on top along with blueberries.',
+      'Sprinkle granola and chia seeds over the fruit.',
+      'Drizzle with honey and serve immediately.',
+    ],
+  },
+  {
+    id: '9',
+    title: 'Salmon Teriyaki',
+    image:
+      'https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=1200&auto=format&fit=crop',
+    duration: '25 mins',
+    difficulty: 'Medium',
+    description:
+      'Pan-seared salmon glazed with a sweet and savory teriyaki sauce, served over steamed rice.',
+    rating: 4.7,
+    ingredients: [
+      'Salmon fillets',
+      'Soy sauce',
+      'Mirin',
+      'Brown sugar',
+      'Garlic',
+      'Ginger',
+      'Sesame seeds',
+      'Steamed rice',
+    ],
+    cookingInstructions: [
+      'Mix soy sauce, mirin, brown sugar, minced garlic, and grated ginger in a small bowl.',
+      'Pat salmon fillets dry with paper towels and season lightly with salt.',
+      'Heat a pan over medium-high heat with a little oil.',
+      'Sear salmon skin-side down for 4 minutes until the skin is crispy, then flip.',
+      'Pour the teriyaki sauce into the pan and spoon it over the salmon as it cooks for 3 more minutes.',
+      'Serve over steamed rice, garnished with sesame seeds and sliced spring onions.',
+    ],
+  },
+  {
+    id: '10',
+    title: 'Tomato Soup',
+    image:
+      'https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=1200&auto=format&fit=crop',
+    duration: '35 mins',
+    difficulty: 'Easy',
+    description:
+      'Warming homemade tomato soup blended until silky smooth, perfect with crusty bread.',
+    rating: 4.4,
+    ingredients: [
+      'Canned tomatoes',
+      'Onion',
+      'Garlic',
+      'Vegetable stock',
+      'Cream',
+      'Basil',
+      'Olive oil',
+    ],
+    cookingInstructions: [
+      'Sauté diced onion and crushed garlic in olive oil over medium heat until softened, about 5 minutes.',
+      'Add canned tomatoes and vegetable stock, then bring to a simmer.',
+      'Cook for 20 minutes, stirring occasionally.',
+      'Remove from heat, add fresh basil leaves, and blend until smooth.',
+      'Return to the pan, stir in cream, and season with salt and pepper.',
+      'Warm through and serve with crusty bread.',
+    ],
+  },
+];
