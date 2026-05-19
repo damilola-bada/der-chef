@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# Der Chef
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native recipe app built with Expo, demonstrating real-world navigation patterns, shared state, and animations.
 
-## Get started
+## Stack
 
-1. Install dependencies
+- **Expo SDK 54** + **Expo Router 6** — file-based routing
+- **React Native 0.81** / **React 19** + TypeScript
+- **React Native Reanimated 4** — spring animations
+- **AsyncStorage** — favorites persistence
 
-   ```bash
-   npm install
-   ```
+## Features
 
-2. Start the app
+- Browse 10 recipes with image, difficulty, duration, and star rating
+- Full recipe detail — ingredients, step-by-step instructions, favorite toggle
+- Filter recipes by difficulty via a bottom sheet
+- Favorites tab — persisted across sessions
+- Animated recipe cards (press scale) and favorite button (bounce on toggle)
 
-   ```bash
-   npx expo start
-   ```
+## Navigation patterns
 
-In the output, you'll find options to open the app in a
+| Pattern       | Where                                              |
+| ------------- | -------------------------------------------------- |
+| **Stack**     | Root navigator — recipe detail pushed over tab bar |
+| **Tabs**      | Bottom nav between Recipes and Favorites           |
+| **formSheet** | Filter sheet presented over the Recipes tab        |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+```json
+app/
+  _layout.tsx           # Root Stack
+  filter.tsx            # formSheet — difficulty filter
+  (tabs)/
+    _layout.tsx         # Tab navigator
+    index.tsx           # Recipes tab
+    favorites.tsx       # Favorites tab
+  recipe/
+    [id].tsx            # Recipe detail screen
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+src/
+  constants/theme.ts    # Design tokens (Colors, Fonts)
+  features/
+    recipe/             # Components, hooks, mock data, types
+    favorites/          # FavoriteButton, useFavorites hook
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Getting started
 
-## Learn more
+```bash
+pnpm install
+pnpm start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Open in iOS Simulator, Android Emulator, or Expo Go.
